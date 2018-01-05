@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>marcel-plugin-etherpad-board</title>
+  <script src="./marcel.js"></script>
+</head>
+
+<body>
+
+  <iframe id="etherpad_board" name="embed_readwrite" width=600 height=400></iframe>
+
+  <script>
+    class HelloWorld extends Marcel.Plugin {
+      constructor() {
+        super()
+        this.iframe = document.getElementById('etherpad_board')
+      }
+
+      render() {
+        if (!this.props.board) return
+
+        this.iframe.src = `https://board.net/p/${this.props.board}?showControls=false&showChat=false&showLineNumbers=false&useMonospaceFont=false`
+      }
+    }
+
+    const instance = new HelloWorld()
+  </script>
+</body>
+
+</html>
