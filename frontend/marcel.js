@@ -6,7 +6,7 @@
 
     render() {}
 
-    constructor(defaults) {
+    constructor(defaults = {}) {
       state = defaults.defaultState
       props = defaults.defaultProps
 
@@ -24,7 +24,7 @@
           props = newProps
           setTimeout(() => {
             this.render()
-            setTimeout(() => this.propsDidChange(prevProps))
+            setTimeout(() => this.propsDidChange(prevProps || {}))
           })
         }
       })

@@ -12,7 +12,7 @@
   <iframe id="etherpad_board" name="embed_readwrite" width=600 height=400></iframe>
 
   <script>
-    class HelloWorld extends Marcel.Plugin {
+    class EtherpadBoard extends Marcel.Plugin {
       constructor() {
         super()
         this.iframe = document.getElementById('etherpad_board')
@@ -25,7 +25,7 @@
       }
     }
 
-    const instance = new HelloWorld()
+    const instance = new EtherpadBoard()
   </script>
 </body>
 
