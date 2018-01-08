@@ -9,7 +9,22 @@
 
 <body>
 
-  <iframe id="etherpad_board" name="embed_readwrite" width=600 height=400></iframe>
+  <iframe id="etherpad_board" name="embed_readwrite"></iframe>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
 
   <script>
     class EtherpadBoard extends Marcel.Plugin {
